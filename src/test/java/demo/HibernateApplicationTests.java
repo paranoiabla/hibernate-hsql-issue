@@ -2,13 +2,13 @@ package demo;
 
 import demo.model.AbstractEntityModel;
 import demo.model.CategoryModel;
-import demo.model.ProductModel;
-import demo.model.PrincipalModel;
-import demo.model.UserModel;
-import demo.model.CustomerModel;
 import demo.model.CommerceCustomerModel;
-import demo.model.PaymentModel;
 import demo.model.CreditCardPaymentModel;
+import demo.model.CustomerModel;
+import demo.model.PaymentModel;
+import demo.model.PrincipalModel;
+import demo.model.ProductModel;
+import demo.model.UserModel;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -19,27 +19,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.support.TransactionCallbackWithoutResult;
-import org.springframework.transaction.support.TransactionTemplate;
-
-import javax.annotation.Resource;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import java.util.Arrays;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = HibernateApplication.class)
 public class HibernateApplicationTests {
-
-    @PersistenceContext(name = "entityManagerFactory")
-    private EntityManager entityManager;
-
-    @Resource(name = "transactionManager")
-    private PlatformTransactionManager transactionManager;
-
-    private TransactionTemplate transactionTemplate;
 
     @Test
     public void test() {
